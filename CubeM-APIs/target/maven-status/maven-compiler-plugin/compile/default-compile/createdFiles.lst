@@ -1,0 +1,10 @@
+com\cubem\entity\Product.class
+com\cubem\dao\IProductDao.class
+com\cubem\entity\Test.class
+com\cubem\services\IProductService.class
+com\cubem\StartMyApp.class
+com\cubem\controllers\ProductController.class
+com\cubem\entity\ProductRepository.class
+com\cubem\services\impl\ProductServiceImpl.class
+com\cubem\entity\Category.class
+com\cubem\dao\impl\ProductDaoImpl.class
