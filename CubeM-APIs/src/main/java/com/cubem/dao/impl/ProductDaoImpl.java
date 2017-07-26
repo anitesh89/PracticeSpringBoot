@@ -36,7 +36,8 @@ public class ProductDaoImpl implements IProductDao {
 		// TODO Auto-generated method stub
 		System.out.println("inside products");
 		
-		List<Product> resultList = entityManager.createNativeQuery("select * from tblProducts order by intProductId").getResultList();
+		List<Product> resultList = (List<Product>)entityManager.createQuery("from Product").getResultList(); 
+		//entityManager.createNativeQuery("select * from tblProducts order by intProductId").getResultList();
 		return resultList;
 		
 	}
@@ -45,13 +46,13 @@ public class ProductDaoImpl implements IProductDao {
 	@Override
 	public List<Category> getAllCategories() {
 		System.out.println("inside category");
-       List<Category> categories = //categoryRepository.getAllCategories();
+       //List<Category> categories = //categoryRepository.getAllCategories();
     		   
-    		   entityManager.createNativeQuery("select cat.intCategoryId as categoryId,cat.strCategoryName as categoryName from tblCategory cat order by cat.intCategoryId").getResultList();
+    		  // entityManager.createNativeQuery("select cat.intCategoryId as categoryId,cat.strCategoryName as categoryName from tblCategory cat order by cat.intCategoryId").getResultList();
 		
 		
-	   /*Query getCategories = entityManager.createQuery("from Category");
-	   List<Category> categories = getCategories.getResultList();*/
+	   Query getCategories = entityManager.createQuery("from Category");
+	   List<Category> categories = getCategories.getResultList();
 	   return categories;
 	}
 	

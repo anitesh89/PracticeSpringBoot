@@ -1,5 +1,6 @@
 package com.cubem.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.cubem.dao.IProductDao;
 import com.cubem.entity.Category;
+import com.cubem.entity.CategoryRepository;
+import com.cubem.entity.Order;
 import com.cubem.entity.Product;
+import com.cubem.entity.ProductRepository;
 import com.cubem.entity.Test;
 import com.cubem.services.IProductService;
 
@@ -15,21 +19,55 @@ import com.cubem.services.IProductService;
 public class ProductServiceImpl implements IProductService{
 	@Autowired
 	private IProductDao productDao;
+	@Autowired
+	private CategoryRepository categoryRepo;
+	
+	@Autowired
+	private ProductRepository productRepo;
+	
 
 	@Override
 	public List<Product> getAllProducts() {
-		return productDao.getAllProducts();
+		List<Product> products = new ArrayList<>();
+		
+		//productRepo.findAll().forEach(products :: add);
+		products = productDao.getAllProducts();
+		
+		return products;
 	}
 
 	@Override
 	public List<Category> getAllCategories() {
-		return productDao.getAllCategories();
+         List<Category> categories = new ArrayList<>();
+		
+		//categoryRepo.findAll().forEach(categories :: add);
+         categories = productDao.getAllCategories();
+		
+		return categories;
 	}
 
 	@Override
 	public List<Test> getAllValues() {
 		// TODO Auto-generated method stub
 		return productDao.getAllValues();
+	}
+
+	@Override
+	public void saveProduct(Product product) {
+		productRepo.save(product);
+		
+	}
+
+	@Override
+	public void saveCatgeory(Category category) {
+		categoryRepo.save(category);
+		
+	}
+
+	@Override
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

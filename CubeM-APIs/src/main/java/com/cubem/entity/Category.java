@@ -2,7 +2,9 @@ package com.cubem.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +14,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+/**
+ * @author Anitesh
+ *
+ */
+
 @Entity
 @Table(name="tblcategory")
 public class Category {
@@ -19,25 +29,37 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "intCategoryId")
-	private int intCategoryId;
+	private int categoryId;
 	
 	@Column(name = "strCategoryName")
 	private String strCategoryName;
 		
-	@OneToMany(mappedBy = "category")
-	private List<Product> products = new ArrayList<>();
+	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@Fetch(FetchMode.JOIN)
+	private Set<Product> products;
 	
-	public List<Product> getProducts() {
+	public Category() {
+		
+	}
+	
+	public Category(int categoryId, String strCategoryName, Set<Product> products) {
+		
+		this.categoryId = categoryId;
+		this.strCategoryName = strCategoryName;
+		this.products = products;
+	}
+	
+	public Set<Product> getProducts() {
 		return products;
 	}
-	public void setProducts(List<Product> products) {
+	public void setProducts(Set<Product> products) {
 		this.products = products;
 	}
 	public int getIntCategoryId() {
-		return intCategoryId;
+		return categoryId;
 	}
 	public void setIntCategoryId(int intCategoryId) {
-		this.intCategoryId = intCategoryId;
+		this.categoryId = intCategoryId;
 	}
 	public String getStrCategoryName() {
 		return strCategoryName;
