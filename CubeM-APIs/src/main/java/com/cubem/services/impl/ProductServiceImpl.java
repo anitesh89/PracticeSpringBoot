@@ -70,4 +70,10 @@ public class ProductServiceImpl implements IProductService{
 		return null;
 	}
 
+	@Override
+	public Product findProductById(int productId) {
+		Product product = productRepo.findOne(productId);
+		return product;
+	}
+
 }

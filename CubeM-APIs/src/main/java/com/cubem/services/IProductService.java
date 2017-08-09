@@ -13,6 +13,8 @@ public interface IProductService {
 	List<Category> getAllCategories();
 	List<Test> getAllValues();
 	
+	Product findProductById(int productId);
+	
 	void saveProduct(Product product);
 	void saveCatgeory(Category category);
 	
