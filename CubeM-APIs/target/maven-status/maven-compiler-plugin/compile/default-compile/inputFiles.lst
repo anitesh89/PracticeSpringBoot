@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\services\impl\ProductServiceImpl.java
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Product.java
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\StartMyApp.java
@@ -12,3 +13,25 @@ F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Ord
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\services\IProductService.java
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Test.java
 F:\STSWorkspace\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\controllers\ProductController.java
+=======
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\dao\IOrderDao.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\OrderDetails.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Product.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Test.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\models\ProductInfo.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\dao\impl\ProductDaoImpl.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\models\ShoppingCart.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\models\ShoppingCartInfo.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\services\IProductService.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\StartMyApp.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Order.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\CategoryRepository.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\services\impl\ProductServiceImpl.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\controllers\ProductController.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\controllers\OrderController.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\ProductRepository.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\models\CustomerInfo.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\entity\Category.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\dao\IProductDao.java
+E:\PracticeSpringBoot\CubeM-APIs\src\main\java\com\cubem\dao\impl\IOrderDaoImpl.java
+>>>>>>> 60aee571df79f622539fd75701d32c37026e7e5b

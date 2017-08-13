@@ -89,10 +89,10 @@ public class ProductServiceImpl implements IProductService{
 		
 	}
 
-	@Override
 	public Product findProductById(int productId) {
-		// TODO Auto-generated method stub
-		return null;
+		Product product = productRepo.findOne(productId);
+		return product;
+
 	}
 
 }

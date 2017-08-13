@@ -1,14 +1,30 @@
 com\cubem\entity\Order.class
 com\cubem\dao\IProductDao.class
 com\cubem\entity\Test.class
+com\cubem\models\CustomerInfo.class
 com\cubem\services\IProductService.class
+<<<<<<< HEAD
+=======
+com\cubem\models\ShoppingCartInfo.class
+>>>>>>> 60aee571df79f622539fd75701d32c37026e7e5b
 com\cubem\controllers\ProductController.class
 com\cubem\controllers\OrderController.class
 com\cubem\entity\ProductRepository.class
 com\cubem\services\impl\ProductServiceImpl.class
 com\cubem\entity\Category.class
 com\cubem\dao\impl\ProductDaoImpl.class
+<<<<<<< HEAD
 com\cubem\entity\CategoryRepository.class
 com\cubem\entity\Product.class
 com\cubem\StartMyApp.class
 com\cubem\entity\OrderDetails.class
+=======
+com\cubem\dao\IOrderDao.class
+com\cubem\models\ShoppingCart.class
+com\cubem\entity\CategoryRepository.class
+com\cubem\entity\Product.class
+com\cubem\dao\impl\IOrderDaoImpl.class
+com\cubem\StartMyApp.class
+com\cubem\entity\OrderDetails.class
+com\cubem\models\ProductInfo.class
+>>>>>>> 60aee571df79f622539fd75701d32c37026e7e5b
