@@ -10,6 +10,7 @@ import com.cubem.dao.IProductDao;
 import com.cubem.entity.Category;
 import com.cubem.entity.CategoryRepository;
 import com.cubem.entity.Order;
+import com.cubem.entity.OrderDetails;
 import com.cubem.entity.Product;
 import com.cubem.entity.ProductRepository;
 import com.cubem.entity.Test;
@@ -30,8 +31,8 @@ public class ProductServiceImpl implements IProductService{
 	public List<Product> getAllProducts() {
 		List<Product> products = new ArrayList<>();
 		
-		//productRepo.findAll().forEach(products :: add);
-		products = productDao.getAllProducts();
+		productRepo.findAll().forEach(products :: add);
+		//products = productDao.getAllProducts();
 		
 		return products;
 	}
@@ -66,6 +67,30 @@ public class ProductServiceImpl implements IProductService{
 
 	@Override
 	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void buyProduct(OrderDetails orderDetails) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeCatgeory(int categoryId) {
+		categoryRepo.delete(categoryId);
+		
+	}
+
+	@Override
+	public void removeProduct(int productId) {
+		productRepo.delete(productId);
+		
+	}
+
+	@Override
+	public Product findProductById(int productId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

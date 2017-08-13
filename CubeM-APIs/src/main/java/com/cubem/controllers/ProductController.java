@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,8 +51,43 @@ public class ProductController {
 	}
 	
 	@PostMapping("save/category")
-	public void saveCategory(@RequestBody Category category){
-		productService.saveCatgeory(category);
+	public ResponseEntity<String> saveCategory(@RequestBody Category category){
+		try {
+			productService.saveCatgeory(category);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return new ResponseEntity<String>("category saved", HttpStatus.OK);
+	}
+	
+	@PostMapping("remove/category/{categoryId}")
+	public ResponseEntity<String> removeCategory(@PathVariable int categoryId){
+		try {
+			productService.removeCatgeory(categoryId);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return new ResponseEntity<String>("category removed", HttpStatus.OK);
+	}
+	
+	
+	@PostMapping("remove/category/{productId}")
+	public ResponseEntity<String> removeProduct(@PathVariable int productId){
+		try {
+			productService.removeProduct(productId);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return new ResponseEntity<String>("product removed", HttpStatus.OK);
 	}
 
 

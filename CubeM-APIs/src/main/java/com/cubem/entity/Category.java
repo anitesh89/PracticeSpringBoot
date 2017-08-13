@@ -17,6 +17,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * @author Anitesh
  *
@@ -34,8 +36,9 @@ public class Category {
 	@Column(name = "strCategoryName")
 	private String strCategoryName;
 		
-	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@Fetch(FetchMode.JOIN)
+	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	//@Fetch(FetchMode.JOIN)
+	@JsonIgnore
 	private Set<Product> products;
 	
 	public Category() {

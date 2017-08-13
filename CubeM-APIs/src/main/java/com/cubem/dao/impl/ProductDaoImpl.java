@@ -1,7 +1,6 @@
 package com.cubem.dao.impl;
 
 
-import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -15,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.cubem.dao.IProductDao;
 import com.cubem.entity.Category;
 import com.cubem.entity.CategoryRepository;
+import com.cubem.entity.Order;
+import com.cubem.entity.OrderDetails;
 import com.cubem.entity.Product;
 import com.cubem.entity.Test;
 
@@ -62,6 +63,18 @@ public class ProductDaoImpl implements IProductDao {
        String hql = "FROM Test ORDER BY id";
 		
 		return (List<Test>) entityManager.createQuery(hql).getResultList();
+	}
+
+	@Override
+	public void buyProduct(OrderDetails orderDetails) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
